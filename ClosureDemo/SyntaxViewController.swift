@@ -8,11 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SyntaxViewController: UIViewController {
 
+    var sayHello = { (name: String) -> String in
+        return "Hello \(name)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let greet = sayHello("Amjad!")
+        print(greet)
     }
 
     override func didReceiveMemoryWarning() {
